@@ -1,0 +1,11 @@
+{
+  "name": "timeutil",
+  "version": "1.0.0",
+  "description": "a tool to translate time format and calculate time",
+  "main": "src/timeutil",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "canduzhang",
+  "license": "MIT"
+}
