@@ -1,5 +1,5 @@
 {
-  "name": "timeutil",
+  "name": "TU",
   "version": "1.0.0",
   "description": "a tool to translate time format and calculate time",
   "main": "src/timeutil",
