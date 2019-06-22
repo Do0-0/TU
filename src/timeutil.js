@@ -1,10 +1,10 @@
 module.exports = {
-	calculateTime(curTime, type, num, format = 'yyyy/mm/dd hh:mm:ss') {
+	calculateTime(curTime, type, num, format = 'yyyy-mm-dd hh:mm:ss') {
 		var date;
 		if (this.isDate(curTime)) {
 			date = curTime
 		} else if (this.isString(curTime)) {
-			var [year = 2018, month = 1, day = 0, hour = 0, min = 0, sec = 0] = curTime.split(/\/|\-|\:|\ |年|月|日 |日|时|分|秒/g);
+			var [year = 2018, month = 1, day = 0, hour = 0, min = 0, sec = 0] = curTime.split(/\/|\-|\:|\ |年 |年|月 |月|日 |日|时 |时|分 |分|秒 |秒/g);
 			date = new Date(year, month - 1, day, hour, min, sec);
 		}
 
@@ -33,7 +33,7 @@ module.exports = {
 		var sec = this.addZero(dateObj.getSeconds());
 		return [year, month, day, hour, min, sec]
 	},
-	formatTime(curTime, format = 'yyyy/mm/dd hh:mm:ss') {
+	formatTime(curTime, format = 'yyyy-mm-dd hh:mm:ss') {
 		if (this.isDate(curTime)) {
 			var [year, month, day, hour, min, sec] = this.getDateArray(curTime)
 		} else if (this.isString(curTime)) {
@@ -58,5 +58,5 @@ module.exports = {
 	},
 	addZero(val) {
 		return val.toString().replace(/^[0-9]{1}$/, '0' + val);
-	},
+	}
 }
